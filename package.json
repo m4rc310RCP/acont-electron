@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "w": "webpack --config webpack.common.js --watch",
-    "start": "ELECTRON_DISABLE_SECURITY_WARNINGS=true electron .",
+    "start": "electron .",
+    "start2": "ELECTRON_DISABLE_SECURITY_WARNINGS=true electron .",
     "build": "cross-env NODE_ENV='production' webpack --config build/webpack.config.js",
     "production": "electron-builder .",
     "stage": "cross-env NODE_ENV=stage electron .",
