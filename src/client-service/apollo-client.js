@@ -4,7 +4,8 @@ import { SubscriptionClient } from 'subscriptions-transport-ws'
 import { WebSocketLink } from '@apollo/client/link/ws'
 
 //var uri = LOCAL_SERVER_URI; //'http://localhost:8081/graphql'//`${process.env.LOCAL_SERVER_URI}`
-let uri = "https://ps.cmo.foundation/graphql"; 
+//let uri = "https://ps.cmo.foundation/graphql"; 
+let uri = "https://acont.cmo.foundation/graphql"; 
 if(process.env.NODE_ENV === 'local'){
   //uri = "http://localhost:8081/graphql";
 }

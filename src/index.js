@@ -10,6 +10,6 @@ import App from './react/App';
 
 createRoot(document.getElementById('root')).render(
     <ApolloProvider client={client}>
-        <App />
+        <App/>
     </ApolloProvider>
 );
