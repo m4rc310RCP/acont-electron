@@ -1,14 +1,15 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
 const isDev = require('electron-is-dev');
 const path = require('path');
 require('dotenv').config()
 
 const createWindow = () => {
     const win = new BrowserWindow({
-      width: 800,
-      height: 600,
+      show:false,
       title: "Painel",
+      frame:false,
       webPreferences: {
+        
         nodeIntegration: true,
         woldSafeExecuteJavaScript:true,
         contextIsolation:true,
@@ -18,6 +19,16 @@ const createWindow = () => {
 
     //win.loadURL('https://ps.cmo.foundation/gui');
     win.loadFile(path.join('src','index.html'));
+
+    win.webContents.on('before-input-event', (event, input)=>{
+        if (input.control && input.key.toLowerCase()==='i'){
+            event.preventDefault();
+            win.webContents.openDevTools();
+        }
+    });
+
+    win.maximize();
+    win.show();
 }
 
 if (isDev){
@@ -38,3 +49,7 @@ app.whenReady().then(()=>{
         }
     });
 });
+
+
+const menu = Menu.buildFromTemplate([])
+Menu.setApplicationMenu(menu)

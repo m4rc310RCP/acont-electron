@@ -1,46 +1,57 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Calistoga&family=Francois+One&family=Roboto:wght@100&family=Rubik+Vinyl&display=swap');
-
 body{
-    height: 100vh;
-    display: flex;
-    background-color: aliceblue;
-    align-items: center;
-    justify-content: center;
-}
-
-#pass-box{
-    border-radius: 10px;
-    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.12);
-    background-color: aquamarine;
-    padding: 30px;
-}
-
-h3, h1, h5, h2, h6{
-    font-size: 17pt;
     margin: 0;
+    padding: 0;
+    background-color: #252526;
     display: flex;
+}
+
+#container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    -webkit-app-region: drag;
+}
+
+#container .title{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
     align-items: center;
-    justify-content: center;
-    font-weight: 100;
-    font-family: 'Roboto', sans-serif;
-
+    justify-content: center;    
+    text-align: center;
+    padding: 10px;
 }
 
-h1{
-    font-size: 100px;
-    font-family: Calistoga;
+#container .title h1{
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-size: 28px;
 }
 
-h2{
-    font-size: 30pt;
-    font-family: Calistoga;
-    color: brown;
+#container .title .logo{
+    background: url('https://via.placeholder.com/100x40') no-repeat center center /cover;
+    height: 40px;
+    width: 100px;
 }
 
-h6{
-    font-size: 15pt;
-    font-weight: 200;
-    color: blue;
+#container .middle{
+    display: flex;
+    flex: auto;
+    background-color: bisque;
 }
+
+#container .middle button{
+    border-radius: 10px;
+    margin: 10pt;
+    border: 0;
+    min-width: 400px;
+    min-height: 100px;
+    background-color: blueviolet;
+    font-size: 30px;
+    color: aliceblue;
+}
+
 

@@ -26,20 +26,7 @@ const App = () => {
         </div>
       </>
     }
-
-
-    if (data){
-      return <>
-              <div id="pass-box">
-                <div className="pass" >
-                  {data.CONECTAR_PAINEL.nr_senha}
-                </div>
-                <div>{data.CONECTAR_PAINEL.ds_local}</div>
-              </div>
-              </>
-    }
-
-    return <div>...</div>
+    return <div className="title-loading">Carregando...</div>
 }
 
 export default App;
