@@ -4,6 +4,11 @@ import {useSubscription} from '@apollo/client/react/hooks'
 
 import {SUB_CONECTAR_PAINEL} from '../client-service/queries/subscriptions';
 
+const painel = () => (
+  <>
+    <p>Erro</p>
+  </>
+);
 
 
 const App = () => {
@@ -12,7 +17,7 @@ const App = () => {
     }});
 
     if(error){
-      return <div>{JSON.stringify(error)}</div>
+      return painel();
     }
 
     if (data){
